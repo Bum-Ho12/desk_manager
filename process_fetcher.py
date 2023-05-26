@@ -89,8 +89,10 @@ def get_size(bytes):
             return f"{bytes:.2f}{unit}B"
         bytes /= 1024
 
-if __name__ == "__main__":
+
+def retriever():
     processes = get_processes_info()
     df = construct_dataframe(processes)
     resources = df.to_dict
-    print(resources)
+    return resources
+
